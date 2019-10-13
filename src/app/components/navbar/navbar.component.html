@@ -1,11 +1,15 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" routerLink="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+<mat-toolbar color="primary">
+  <button mat-button [matMenuTriggerFor]="appMenu">
+    T. B. Joudrey
   </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-      <a class="nav-item nav-link active" routerLink="/page1">Page 1 <span class="sr-only">(current)</span></a>
-    </div>
-  </div>
-</nav>
+
+  <mat-menu #appMenu="matMenu">
+    <ng-template matMenuContent>
+      <button mat-menu-item routerLink="">Main</button>
+      <button mat-menu-item routerLink="resume">Resume</button>
+      <button mat-menu-item routerLink="projects">Projects</button>
+      <button mat-menu-item routerLink="contact">Contact</button>
+    </ng-template>
+  </mat-menu>
+
+</mat-toolbar>
