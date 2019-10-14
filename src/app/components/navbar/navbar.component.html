@@ -1,15 +1,6 @@
 <mat-toolbar color="primary">
-  <button mat-button [matMenuTriggerFor]="appMenu">
-    T. B. Joudrey
-  </button>
-
-  <mat-menu #appMenu="matMenu">
-    <ng-template matMenuContent>
-      <button mat-menu-item routerLink="">Main</button>
-      <button mat-menu-item routerLink="resume">Resume</button>
-      <button mat-menu-item routerLink="projects">Projects</button>
-      <button mat-menu-item routerLink="contact">Contact</button>
-    </ng-template>
-  </mat-menu>
-
+  <h4 routerLink="" class = "title"> T. B. Joudrey </h4>
+  <p class="nav_item" routerLink="resume">Resume</p>
+  <p class="nav_item" routerLink="projects">Projects</p>
+  <p class="nav_item" routerLink="contact">Contact</p>
 </mat-toolbar>
