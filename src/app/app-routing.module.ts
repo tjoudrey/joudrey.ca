@@ -7,7 +7,7 @@ import {MainComponent} from "./views/main/main.component";
 
 
 const routes: Routes = [
-  {path: 'main', component: MainComponent},
+  {path: '', component: MainComponent},
   {path: 'resume', component: ResumeComponent},
   {path: 'projects', component: ProjectsComponent},
   {path: 'contact', component: ContactComponent}

@@ -6,8 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./projects.component.css']
 })
 export class ProjectsComponent implements OnInit {
+  projects: String[] = [];
 
-  constructor() { }
+  constructor() {
+    this.projects = [
+      "tjoudrey/javaRESTcli",
+      "tjoudrey/starwars-explorer",
+      "tjoudrey/joudrey.ca"
+    ]
+  }
 
   ngOnInit() {
   }

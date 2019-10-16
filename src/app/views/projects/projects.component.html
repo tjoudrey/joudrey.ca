@@ -1,1 +1,7 @@
-<p>projects works!</p>
+<h2 class="header">Here's some stuff I've been working on</h2>
+
+<mat-grid-list cols="1" rowHeight="8:1">
+  <mat-grid-tile *ngFor="let project of projects">
+    <a href="https://github.com/{{project}}"><img src="https://gh-card.dev/repos/{{project}}.svg"></a>
+  </mat-grid-tile>
+</mat-grid-list>

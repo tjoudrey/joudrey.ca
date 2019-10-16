@@ -1,25 +1,32 @@
-<h2>Education</h2>
-<mat-list class="cv-section education">
-    <mat-list-item *ngFor="let e of education">{{e}}</mat-list-item>
-</mat-list>
+<div class="container">
+  <br>
+  <h3>Education</h3>
+  <mat-list class="cv-section education">
+    <mat-list-item *ngFor="let e of education">
+      <p>{{e}}</p>
+      <br>
+    </mat-list-item>
+  </mat-list>
+  <br>
+  <h3>Employment</h3>
+  <mat-list class="cv-section employment">
+    <mat-list-item *ngFor="let em of employment">
+      <p class="job">{{em.title}}</p>
+      <p class="employer">&nbsp; at {{em.location}}</p>
+    </mat-list-item>
+  </mat-list>
+  <br>
+  <h3>Stuff I'm Alright At</h3>
+  <mat-grid-list cols="4" rowHeight="1:1">
+    <mat-grid-tile *ngFor="let tech of skills">
+      <i class="{{tech.tag}} icon"></i>
+      <h3>{{tech.name}}</h3>
+    </mat-grid-tile>
+  </mat-grid-list>
 
-<h2>Employment</h2>
-<mat-list class="cv-section employment">
-  <mat-list-item *ngFor="let em of employment">{{em.title}} at {{em.location}}</mat-list-item>
-</mat-list>
-
-<h2>Stuff I'm Alright At</h2>
-<mat-grid-list cols="4" rowHeight="1:1">
-  <mat-grid-tile *ngFor="let tech of skills">
-    <i class={{tech.tag}}></i>
-    <h3>{{tech.name}}</h3>
-  </mat-grid-tile>
-</mat-grid-list>
-
-<h2>Other</h2>
-<mat-list class="cv-section other">
-  <mat-list-item *ngFor="let other of other">{{other}}</mat-list-item>
-</mat-list>
-
-
-
+  <h3>Other</h3>
+  <mat-list class="cv-section other">
+    <p *ngFor="let other of other">{{other}}</p>
+  </mat-list>
+  <br>
+</div>

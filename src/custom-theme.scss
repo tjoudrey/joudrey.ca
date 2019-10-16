@@ -3,6 +3,7 @@
 // For more information: https://material.angular.io/guide/theming
 @import '~@angular/material/theming';
 // Plus imports for other components in your app.
+@import "~@material/animation/variables";
 
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
@@ -25,4 +26,40 @@ $joudreyca-theme: mat-light-theme($joudreyca-primary, $joudreyca-accent, $joudre
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include angular-material-theme($joudreyca-theme);
+
+.title{
+  font-weight: 300 !important;
+  font-size: .70em;
+  margin-right: 6em !important;
+}
+
+.nav_item {
+  margin: 1.3em;
+  font-size: .87em !important;
+  font-weight: 100;
+}
+
+.icon{
+  font-size: 8em !important;
+  opacity: 0.1;
+  position: absolute;
+}
+
+.cv-section{
+
+}
+
+.mat-card-title {
+  margin-top: 4em;
+}
+
+.header {
+  text-align: center;
+  margin-top: 1em;
+}
+
+.employer {
+  color: dimgrey;
+}
+
 

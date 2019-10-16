@@ -1,11 +1,29 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Role} from "../../models/role";
 import {Tech} from "../../models/tech";
+import {animate, state, style, transition, trigger} from "@angular/animations";
 
 @Component({
   selector: 'app-resume',
   templateUrl: './resume.component.html',
-  styleUrls: ['./resume.component.css']
+  styleUrls: ['./resume.component.css'],
+  animations: [
+    trigger('hover', [
+        state('hover', style({
+          opacity: .4
+        })),
+      state('notHover', style({
+        opacity: .1
+      })),
+      transition('hover => notHover', [
+        animate('.5s')
+      ]),
+      transition('notHover => hover', [
+        animate('.5s')
+      ])
+      ]
+    )
+  ]
 })
 export class ResumeComponent implements OnInit {
   education: String[] = [];
@@ -20,29 +38,29 @@ export class ResumeComponent implements OnInit {
       "Completed Scrum.org Scrum Master training"
     ];
     this.employment = [
-      {location:"Acadia University", title:"Teacher's Assistant"},
-      {location:"Bell Aliant", title:"Data Analyst"},
-      {location:"Lockheed Martin Canada", title:"Software Developer"},
-      {location:"Gracenote Sports", title:"Software Developer and Scrum Master"}
+      {location: "Acadia University", title: "Teacher's Assistant"},
+      {location: "Bell Aliant", title: "Data Analyst"},
+      {location: "Lockheed Martin Canada", title: "Software Developer"},
+      {location: "Gracenote Sports", title: "Software Developer and Scrum Master"}
     ];
     this.skills = [
-      {name:"Java", tag: "devicon-java-plain"},
-      {name:"Python", tag: "devicon-python-plain"},
-      {name:"TypeScript", tag: "devicon-typescript-plain"},
-      {name:"PostgreSQL", tag: "devicon-postgresql-plain"},
-      {name:"Ubuntu", tag: "devicon-ubuntu-plain"},
-      {name:"Git", tag: "devicon-github-plain"},
-      {name:"Angular", tag: "devicon-angularjs-plain"},
-      {name:"Karma", tag: ""},
-      {name:"Jasmine", tag: "devicon-jasmine-plain"},
-      {name:"Express", tag: "devicon-express-original"},
-      {name:"Node.js", tag: "devicon-nodejs-plain"},
-      {name:"Spring", tag: ""},
-      {name:"Hibernate", tag: ""},
-      {name:"Gradle", tag: "devicon-gradle-plain"},
-      {name:"Maven", tag: ""},
-      {name:"Intillij", tag: "devicon-intellij-plain"},
-      {name:"Webstorm", tag: "devicon-webstorm-plain"},
+      {name: "Java", tag: "devicon-java-plain"},
+      {name: "Python", tag: "devicon-python-plain"},
+      {name: "TypeScript", tag: "devicon-typescript-plain"},
+      {name: "PostgreSQL", tag: "devicon-postgresql-plain"},
+      {name: "Ubuntu", tag: "devicon-ubuntu-plain"},
+      {name: "Git", tag: "devicon-github-plain"},
+      {name: "Angular", tag: "devicon-angularjs-plain"},
+      {name: "Karma", tag: ""},
+      {name: "Jasmine", tag: "devicon-jasmine-plain"},
+      {name: "Express", tag: "devicon-express-original"},
+      {name: "Node.js", tag: "devicon-nodejs-plain"},
+      {name: "Spring", tag: ""},
+      {name: "Hibernate", tag: ""},
+      {name: "Gradle", tag: "devicon-gradle-plain"},
+      {name: "Maven", tag: ""},
+      {name: "Intillij", tag: "devicon-intellij-plain"},
+      {name: "Webstorm", tag: "devicon-webstorm-plain"},
 
     ];
     this.other = [
