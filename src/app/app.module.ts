@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ProjectsComponent } from './views/projects/projects.component';
 import { ResumeComponent } from './views/resume/resume.component';
-import { ContactComponent } from './views/contact/contact.component';
 import { MainComponent } from './views/main/main.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSliderModule} from "@angular/material/slider";
@@ -23,7 +22,6 @@ import {MatCardModule} from "@angular/material/card";
     NavbarComponent,
     ProjectsComponent,
     ResumeComponent,
-    ContactComponent,
     MainComponent
   ],
   imports: [
